@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
@@ -10,64 +11,35 @@
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
+        app:titleTextColor="@color/white"
+        app:title="Tasks App"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar" >
-        <Button
+
+
+        <ImageButton
             android:id="@+id/btnLogout"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:text="X"
-            android:textSize="20dp"
+            android:src="@drawable/baseline_logout_24"
             />
     </androidx.appcompat.widget.Toolbar>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="32dp"
-        android:gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="@string/title_tarefas"
-        />
-
-    <EditText
-        android:id="@+id/editTextTask"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:hint="Adicionar tarefa" />
 
     <LinearLayout
+        android:id="@+id/clima_tempo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingHorizontal="10dp"
+        android:orientation="vertical"
         >
-        <Button
-            android:id="@+id/buttonAddTask"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="8dp"
-            android:layout_marginLeft="8dp"
-            android:text="Adicionar" />
-        <Button
-            android:id="@+id/btnRemoveTask"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="8dp"
-            android:text="Remover" />
-
-        <Button
-            android:id="@+id/btnEditTask"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Editar" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/fragmento"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
 
-    <ListView
-        android:id="@+id/listViewTasks"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    </LinearLayout>
 
 </LinearLayout>
